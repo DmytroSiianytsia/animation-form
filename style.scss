@@ -17,8 +17,7 @@ input {
   background-color: rgb(228, 225, 225);
   background-position: center; 
 
-  animation: bg-opacity 1s;
-  
+  animation: bg-opacity 1s;  
 
   .form-qcrm {    
     display: flex;
@@ -38,7 +37,7 @@ input {
     
     animation-name: form-animation;
     animation-duration: 1s;    
-    transform-origin: top;    
+    transform-origin: top;        
     
     &__logo {
       position: absolute;
@@ -66,7 +65,7 @@ input {
         border-radius: 7px;
         opacity: .8;
 
-        animation-duration: 1.5s;
+        animation-duration: 1s;
       }
       
       &-orange {
@@ -241,7 +240,7 @@ input {
 
   to {
     transform: translate(-50%, -50%) rotateX(0deg);
-    opacity: .9;   
+    opacity: .95;   
   }
 }
 

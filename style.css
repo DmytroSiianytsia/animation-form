@@ -61,8 +61,8 @@ input {
         height: 29px;
         border-radius: 7px;
         opacity: .8;
-        -webkit-animation-duration: 1.5s;
-                animation-duration: 1.5s; }
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s; }
       .container .form-qcrm__logo-orange {
         top: 15px;
         left: 29px;
@@ -202,7 +202,7 @@ input {
   to {
     -webkit-transform: translate(-50%, -50%) rotateX(0deg);
             transform: translate(-50%, -50%) rotateX(0deg);
-    opacity: .9; } }
+    opacity: .95; } }
 @keyframes form-animation {
   from {
     -webkit-transform: translate(-50%, -50%) rotateX(-10deg);
@@ -211,7 +211,7 @@ input {
   to {
     -webkit-transform: translate(-50%, -50%) rotateX(0deg);
             transform: translate(-50%, -50%) rotateX(0deg);
-    opacity: .9; } }
+    opacity: .95; } }
 @-webkit-keyframes logo {
   from {
     -webkit-transform: translate(-50%, -50%) rotateX(90deg);
