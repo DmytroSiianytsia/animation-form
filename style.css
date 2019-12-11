@@ -53,46 +53,40 @@ input {
               box-shadow: 0 0 7px #b7b7b7;
       -webkit-animation-name: logo;
               animation-name: logo;
-      -webkit-animation-duration: 3s;
-              animation-duration: 3s; }
+      -webkit-animation-duration: 2.5s;
+              animation-duration: 2.5s; }
       .container .form-qcrm__logo-orange, .container .form-qcrm__logo-blue, .container .form-qcrm__logo-pink, .container .form-qcrm__logo-green {
         position: absolute;
         width: 29px;
         height: 29px;
         border-radius: 7px;
-        opacity: .8; }
+        opacity: .8;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s; }
       .container .form-qcrm__logo-orange {
-        background: #f8911d;
         top: 15px;
         left: 29px;
+        background: #f8911d;
         -webkit-animation-name: orange-block;
-                animation-name: orange-block;
-        -webkit-animation-duration: 1.5s;
-                animation-duration: 1.5s; }
+                animation-name: orange-block; }
       .container .form-qcrm__logo-blue {
-        background: #3e9ffd;
         top: 44px;
         left: 29px;
+        background: #3e9ffd;
         -webkit-animation-name: blue-block;
-                animation-name: blue-block;
-        -webkit-animation-duration: 1.5s;
-                animation-duration: 1.5s; }
+                animation-name: blue-block; }
       .container .form-qcrm__logo-pink {
-        background: #d1369c;
         right: 29px;
         bottom: 44px;
+        background: #d1369c;
         -webkit-animation-name: pink-block;
-                animation-name: pink-block;
-        -webkit-animation-duration: 1.5s;
-                animation-duration: 1.5s; }
+                animation-name: pink-block; }
       .container .form-qcrm__logo-green {
-        background: #4ebf49;
         right: 29px;
         bottom: 15px;
+        background: #4ebf49;
         -webkit-animation-name: green-block;
-                animation-name: green-block;
-        -webkit-animation-duration: 1.5s;
-                animation-duration: 1.5s; }
+                animation-name: green-block; }
     .container .form-qcrm__title {
       margin-top: 70px;
       margin-bottom: 0;
@@ -183,51 +177,67 @@ input {
 
 @-webkit-keyframes bg-opacity {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-perspective: 0;
+            perspective: 0; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-perspective: 70px;
+            perspective: 70px; } }
 
 @keyframes bg-opacity {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-perspective: 0;
+            perspective: 0; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-perspective: 70px;
+            perspective: 70px; } }
 @-webkit-keyframes form-animation {
   from {
-    -webkit-transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
-            transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
-    opacity: .2; }
+    -webkit-transform: translate(-50%, -50%) rotateX(-10deg);
+            transform: translate(-50%, -50%) rotateX(-10deg);
+    opacity: 0; }
   to {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg);
+            transform: translate(-50%, -50%) rotateX(0deg);
     opacity: .9; } }
 @keyframes form-animation {
   from {
-    -webkit-transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
-            transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
-    opacity: .2; }
+    -webkit-transform: translate(-50%, -50%) rotateX(-10deg);
+            transform: translate(-50%, -50%) rotateX(-10deg);
+    opacity: 0; }
   to {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg);
+            transform: translate(-50%, -50%) rotateX(0deg);
     opacity: .9; } }
 @-webkit-keyframes logo {
   from {
-    -webkit-transform: translate(-50%, -50%) rotateX(70deg);
-            transform: translate(-50%, -50%) rotateX(70deg);
-    background: rgba(255, 255, 255, 0.3); }
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+            transform: translate(-50%, -50%) rotateX(90deg);
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-perspective: 60px;
+            perspective: 60px; }
   to {
     -webkit-transform: translate(-50%, -50%) rotateX(0deg);
             transform: translate(-50%, -50%) rotateX(0deg);
-    background: rgba(255, 255, 255, 0.8); } }
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-perspective: none;
+            perspective: none; } }
 @keyframes logo {
   from {
-    -webkit-transform: translate(-50%, -50%) rotateX(70deg);
-            transform: translate(-50%, -50%) rotateX(70deg);
-    background: rgba(255, 255, 255, 0.3); }
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+            transform: translate(-50%, -50%) rotateX(90deg);
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-perspective: 60px;
+            perspective: 60px; }
   to {
     -webkit-transform: translate(-50%, -50%) rotateX(0deg);
             transform: translate(-50%, -50%) rotateX(0deg);
-    background: rgba(255, 255, 255, 0.8); } }
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-perspective: none;
+            perspective: none; } }
 @-webkit-keyframes orange-block {
   from {
     -webkit-transform: rotateX(70deg);
@@ -298,7 +308,7 @@ input {
   from {
     -webkit-transform: rotateX(70deg);
             transform: rotateX(70deg);
-    bottom: 300px;
+    bottom: 450px;
     opacity: .2; }
   to {
     -webkit-transform: rotateX(0deg);
@@ -309,7 +319,7 @@ input {
   from {
     -webkit-transform: rotateX(70deg);
             transform: rotateX(70deg);
-    bottom: 300px;
+    bottom: 450px;
     opacity: .2; }
   to {
     -webkit-transform: rotateX(0deg);

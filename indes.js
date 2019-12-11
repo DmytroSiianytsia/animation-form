@@ -9,4 +9,4 @@ setInterval(function() {
   count++;
 
   if (count > 1) count = 0;
-}, 28800000);
+}, 60000);

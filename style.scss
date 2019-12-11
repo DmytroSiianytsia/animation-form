@@ -18,6 +18,7 @@ input {
   background-position: center; 
 
   animation: bg-opacity 1s;
+  
 
   .form-qcrm {    
     display: flex;
@@ -36,7 +37,7 @@ input {
     box-shadow: 0 5px 25px rgb(136, 136, 136);
     
     animation-name: form-animation;
-    animation-duration: 2s;
+    animation-duration: 2s;    
     transform-origin: top;    
     
     &__logo {
@@ -52,7 +53,7 @@ input {
       box-shadow: 0 0 7px #b7b7b7;
 
       animation-name: logo;
-      animation-duration: 3s;
+      animation-duration: 2.5s;
 
       &-orange,
       &-blue,
@@ -64,46 +65,40 @@ input {
         
         border-radius: 7px;
         opacity: .8;
+
+        animation-duration: 1.5s;
       }
       
       &-orange {
-        background: #f8911d ;
-
         top: 15px;
         left: 29px;
 
-        animation-name: orange-block;
-        animation-duration: 1.5s;
+        background: #f8911d;
+        animation-name: orange-block;        
       }
 
       &-blue {
-        background: #3e9ffd;
-
         top: 44px;
         left: 29px;
 
-        animation-name: blue-block;
-        animation-duration: 1.5s;
+        background: #3e9ffd;
+        animation-name: blue-block; 
       }
 
       &-pink {
-        background: #d1369c;
-
         right: 29px;
         bottom: 44px;
 
-        animation-name: pink-block;
-        animation-duration: 1.5s;
+        background: #d1369c;
+        animation-name: pink-block;        
       }
 
       &-green {
-        background: #4ebf49;
-
         right: 29px;
         bottom: 15px;
 
-        animation-name: green-block;
-        animation-duration: 1.5s;
+        background: #4ebf49;
+        animation-name: green-block;        
       }
     }
 
@@ -229,34 +224,38 @@ input {
 @keyframes bg-opacity {
   0% {
     opacity: 0;
+    perspective: 0;
   }
 
   100% {
     opacity: 1;
+    perspective: 70px;
   }
 }
 
 @keyframes form-animation {
   from {
-    transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
-    opacity: .2; 
+    transform: translate(-50%, -50%) rotateX(-10deg);
+    opacity: 0;    
   }
 
   to {
-    transform: translate(-50%, -50%);
-    opacity: .9;
+    transform: translate(-50%, -50%) rotateX(0deg);
+    opacity: .9;   
   }
 }
 
 @keyframes logo {
   from {
-    transform: translate(-50%, -50%) rotateX(70deg);
-    background: $wite03;    
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background: $wite03;
+    perspective: 60px;    
   }
 
   to {
     transform: translate(-50%, -50%) rotateX(0deg);
     background: $wite08;
+    perspective: none;
   }
 }
 
@@ -305,7 +304,7 @@ input {
 @keyframes green-block {
   from {
     transform:  rotateX(70deg);
-    bottom: 300px;
+    bottom: 450px;
     opacity: .2;
   }
 
