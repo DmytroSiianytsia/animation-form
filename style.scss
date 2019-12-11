@@ -1,0 +1,324 @@
+$wite08: rgba($color: #fff, $alpha: .8);
+$wite03: rgba($color: #fff, $alpha: .3);
+
+body {
+  margin: 0; 
+  font-family: 'HelveticaNeueLight';  
+}
+
+input {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  height: 937px;  
+  
+  background-color: rgb(228, 225, 225);
+  background-position: center; 
+
+  animation: bg-opacity 1s;
+
+  .form-qcrm {    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 360px;
+    height: 420px;
+
+    background: $wite08;
+    box-shadow: 0 5px 25px rgb(136, 136, 136);
+    
+    animation-name: form-animation;
+    animation-duration: 2s;
+    transform-origin: top;    
+    
+    &__logo {
+      position: absolute;
+      left: 50%;      
+      transform: translate(-50%, -50%); 
+
+      width: 100px;
+      height: 100px;
+      background-color: $wite08;
+
+      border-radius: 20px;
+      box-shadow: 0 0 7px #b7b7b7;
+
+      animation-name: logo;
+      animation-duration: 3s;
+
+      &-orange,
+      &-blue,
+      &-pink,
+      &-green {
+        position: absolute;
+        width: 29px;
+        height: 29px;
+        
+        border-radius: 7px;
+        opacity: .8;
+      }
+      
+      &-orange {
+        background: #f8911d ;
+
+        top: 15px;
+        left: 29px;
+
+        animation-name: orange-block;
+        animation-duration: 1.5s;
+      }
+
+      &-blue {
+        background: #3e9ffd;
+
+        top: 44px;
+        left: 29px;
+
+        animation-name: blue-block;
+        animation-duration: 1.5s;
+      }
+
+      &-pink {
+        background: #d1369c;
+
+        right: 29px;
+        bottom: 44px;
+
+        animation-name: pink-block;
+        animation-duration: 1.5s;
+      }
+
+      &-green {
+        background: #4ebf49;
+
+        right: 29px;
+        bottom: 15px;
+
+        animation-name: green-block;
+        animation-duration: 1.5s;
+      }
+    }
+
+    &__title {
+      margin-top: 70px;
+      margin-bottom: 0;
+      font-size: 30px;
+    }
+
+    &__subtitle {
+      margin: 0;
+      font-size: 15px;
+      color: #787b79;
+    }
+
+    &__login,
+    &__password {
+      width: 280px;
+      height: 40px; 
+      padding: 0 10px;
+      
+      border: 1px solid black;     
+
+      font-size: 16px; 
+      
+      &::placeholder {
+        color: #b7b7b7;
+      }
+    }
+
+    &__login:focus,
+    &__password:focus {
+      border: 2px solid #3e9ffd;
+      box-shadow: inset 0 2px 3px #b7b7b7; 
+    }
+
+    &__login {
+      margin-top: 35px;
+    }
+
+    &__password {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    &__checkbox-container {
+      position: relative;
+      width: 280px;
+    }
+    
+    &__checkbox {
+     appearance: none;
+     position: absolute;    
+    }  
+
+    &__label {
+      position: absolute;
+      padding-left: 20px;
+
+      font-size: 14px;
+      color: #636363;
+      
+      user-select: none;
+      
+      &::before {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        
+        background-color: #fff;
+        border-radius: 3px;
+
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 1;
+      } 
+
+      &::after {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+
+        background: url('./img/check.png') no-repeat center;
+        filter: invert(1);
+        background-size: 10px 10px;
+        opacity: 0;
+
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 2;       
+      }        
+    } 
+    
+    .form-qcrm__checkbox:checked + .form-qcrm__label::before {
+      background-color: #3e9ffd;
+    }
+
+    .form-qcrm__checkbox:checked + .form-qcrm__label::after {
+      opacity: 1;
+    }
+
+    &__subbmit {
+      width: 280px;
+      height: 40px; 
+      margin-top: 40px;
+      padding: 0 10px;
+
+      border: 0;
+      outline: none;
+
+      background-color: #3e9ffd;
+      color: #fff;
+
+      font-size: 16px;
+    }
+  }
+}
+
+@keyframes bg-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes form-animation {
+  from {
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+    opacity: .2; 
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+    opacity: .9;
+  }
+}
+
+@keyframes logo {
+  from {
+    transform: translate(-50%, -50%) rotateX(70deg);
+    background: $wite03;    
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotateX(0deg);
+    background: $wite08;
+  }
+}
+
+@keyframes orange-block {
+  from {
+    transform:  rotateX(70deg);
+    top: -200px;
+    opacity: .2;
+  }
+
+  to {
+    transform:  rotateX(0deg);
+    top: 15px;
+    opacity: .8;
+  }
+}
+
+@keyframes blue-block {
+  from {
+    transform:  rotateX(70deg);
+    top: -30px;
+    opacity: .2;
+  }
+
+  to {
+    transform:  rotateX(0deg);
+    top: 44px;
+    opacity: .8;
+  }
+}
+
+@keyframes pink-block {
+  from {
+    transform:  rotateX(70deg);
+    bottom: 150px;
+    opacity: .2;
+  }
+
+  to {
+    transform:  rotateX(0deg);
+    bottom: 44px;
+    opacity: .8;
+  }
+}
+
+@keyframes green-block {
+  from {
+    transform:  rotateX(70deg);
+    bottom: 300px;
+    opacity: .2;
+  }
+
+  to {
+    transform:  rotateX(0deg);
+    bottom: 15px;
+    opacity: .8;
+  }
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('./fonts/HelveticaNeueLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  font-family: 'HelveticaNeueLight'; }
+
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.container {
+  position: relative;
+  height: 937px;
+  background-color: #e4e1e1;
+  background-position: center;
+  -webkit-animation: bg-opacity 1s;
+          animation: bg-opacity 1s; }
+  .container .form-qcrm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 360px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 0 5px 25px #888888;
+            box-shadow: 0 5px 25px #888888;
+    -webkit-animation-name: form-animation;
+            animation-name: form-animation;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-transform-origin: top;
+            transform-origin: top; }
+    .container .form-qcrm__logo {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      -webkit-box-shadow: 0 0 7px #b7b7b7;
+              box-shadow: 0 0 7px #b7b7b7;
+      -webkit-animation-name: logo;
+              animation-name: logo;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s; }
+      .container .form-qcrm__logo-orange, .container .form-qcrm__logo-blue, .container .form-qcrm__logo-pink, .container .form-qcrm__logo-green {
+        position: absolute;
+        width: 29px;
+        height: 29px;
+        border-radius: 7px;
+        opacity: .8; }
+      .container .form-qcrm__logo-orange {
+        background: #f8911d;
+        top: 15px;
+        left: 29px;
+        -webkit-animation-name: orange-block;
+                animation-name: orange-block;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s; }
+      .container .form-qcrm__logo-blue {
+        background: #3e9ffd;
+        top: 44px;
+        left: 29px;
+        -webkit-animation-name: blue-block;
+                animation-name: blue-block;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s; }
+      .container .form-qcrm__logo-pink {
+        background: #d1369c;
+        right: 29px;
+        bottom: 44px;
+        -webkit-animation-name: pink-block;
+                animation-name: pink-block;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s; }
+      .container .form-qcrm__logo-green {
+        background: #4ebf49;
+        right: 29px;
+        bottom: 15px;
+        -webkit-animation-name: green-block;
+                animation-name: green-block;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s; }
+    .container .form-qcrm__title {
+      margin-top: 70px;
+      margin-bottom: 0;
+      font-size: 30px; }
+    .container .form-qcrm__subtitle {
+      margin: 0;
+      font-size: 15px;
+      color: #787b79; }
+    .container .form-qcrm__login, .container .form-qcrm__password {
+      width: 280px;
+      height: 40px;
+      padding: 0 10px;
+      border: 1px solid black;
+      font-size: 16px; }
+      .container .form-qcrm__login::-webkit-input-placeholder, .container .form-qcrm__password::-webkit-input-placeholder {
+        color: #b7b7b7; }
+      .container .form-qcrm__login:-ms-input-placeholder, .container .form-qcrm__password:-ms-input-placeholder {
+        color: #b7b7b7; }
+      .container .form-qcrm__login::-ms-input-placeholder, .container .form-qcrm__password::-ms-input-placeholder {
+        color: #b7b7b7; }
+      .container .form-qcrm__login::placeholder, .container .form-qcrm__password::placeholder {
+        color: #b7b7b7; }
+    .container .form-qcrm__login:focus, .container .form-qcrm__password:focus {
+      border: 2px solid #3e9ffd;
+      -webkit-box-shadow: inset 0 2px 3px #b7b7b7;
+              box-shadow: inset 0 2px 3px #b7b7b7; }
+    .container .form-qcrm__login {
+      margin-top: 35px; }
+    .container .form-qcrm__password {
+      margin-top: 20px;
+      margin-bottom: 25px; }
+    .container .form-qcrm__checkbox-container {
+      position: relative;
+      width: 280px; }
+    .container .form-qcrm__checkbox {
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      position: absolute; }
+    .container .form-qcrm__label {
+      position: absolute;
+      padding-left: 20px;
+      font-size: 14px;
+      color: #636363;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+      .container .form-qcrm__label::before {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        border-radius: 3px;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 1; }
+      .container .form-qcrm__label::after {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        background: url("./img/check.png") no-repeat center;
+        -webkit-filter: invert(1);
+                filter: invert(1);
+        background-size: 10px 10px;
+        opacity: 0;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 2; }
+    .container .form-qcrm .form-qcrm__checkbox:checked + .form-qcrm__label::before {
+      background-color: #3e9ffd; }
+    .container .form-qcrm .form-qcrm__checkbox:checked + .form-qcrm__label::after {
+      opacity: 1; }
+    .container .form-qcrm__subbmit {
+      width: 280px;
+      height: 40px;
+      margin-top: 40px;
+      padding: 0 10px;
+      border: 0;
+      outline: none;
+      background-color: #3e9ffd;
+      color: #fff;
+      font-size: 16px; }
+
+@-webkit-keyframes bg-opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes bg-opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes form-animation {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+            transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+    opacity: .2; }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: .9; } }
+@keyframes form-animation {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+            transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+    opacity: .2; }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: .9; } }
+@-webkit-keyframes logo {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotateX(70deg);
+            transform: translate(-50%, -50%) rotateX(70deg);
+    background: rgba(255, 255, 255, 0.3); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg);
+            transform: translate(-50%, -50%) rotateX(0deg);
+    background: rgba(255, 255, 255, 0.8); } }
+@keyframes logo {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotateX(70deg);
+            transform: translate(-50%, -50%) rotateX(70deg);
+    background: rgba(255, 255, 255, 0.3); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg);
+            transform: translate(-50%, -50%) rotateX(0deg);
+    background: rgba(255, 255, 255, 0.8); } }
+@-webkit-keyframes orange-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    top: -200px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    top: 15px;
+    opacity: .8; } }
+@keyframes orange-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    top: -200px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    top: 15px;
+    opacity: .8; } }
+@-webkit-keyframes blue-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    top: -30px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    top: 44px;
+    opacity: .8; } }
+@keyframes blue-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    top: -30px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    top: 44px;
+    opacity: .8; } }
+@-webkit-keyframes pink-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    bottom: 150px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    bottom: 44px;
+    opacity: .8; } }
+@keyframes pink-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    bottom: 150px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    bottom: 44px;
+    opacity: .8; } }
+@-webkit-keyframes green-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    bottom: 300px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    bottom: 15px;
+    opacity: .8; } }
+@keyframes green-block {
+  from {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    bottom: 300px;
+    opacity: .2; }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    bottom: 15px;
+    opacity: .8; } }
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url("./fonts/HelveticaNeueLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/*# sourceMappingURL=style.css.map */
