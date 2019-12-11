@@ -37,7 +37,7 @@ input {
     box-shadow: 0 5px 25px rgb(136, 136, 136);
     
     animation-name: form-animation;
-    animation-duration: 2s;    
+    animation-duration: 1s;    
     transform-origin: top;    
     
     &__logo {
@@ -53,7 +53,7 @@ input {
       box-shadow: 0 0 7px #b7b7b7;
 
       animation-name: logo;
-      animation-duration: 2.5s;
+      animation-duration: 1s;
 
       &-orange,
       &-blue,

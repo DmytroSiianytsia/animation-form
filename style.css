@@ -36,8 +36,8 @@ input {
             box-shadow: 0 5px 25px #888888;
     -webkit-animation-name: form-animation;
             animation-name: form-animation;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
     -webkit-transform-origin: top;
             transform-origin: top; }
     .container .form-qcrm__logo {
@@ -53,8 +53,8 @@ input {
               box-shadow: 0 0 7px #b7b7b7;
       -webkit-animation-name: logo;
               animation-name: logo;
-      -webkit-animation-duration: 2.5s;
-              animation-duration: 2.5s; }
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s; }
       .container .form-qcrm__logo-orange, .container .form-qcrm__logo-blue, .container .form-qcrm__logo-pink, .container .form-qcrm__logo-green {
         position: absolute;
         width: 29px;
