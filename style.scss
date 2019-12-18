@@ -13,24 +13,33 @@ input {
 
 .container {
   position: relative;
-  height: 937px;  
+  min-height: 100vh; 
   
   background-color: rgb(228, 225, 225);
-  background-position: center; 
+  background-position: center;
+  background-size: cover; 
 
   animation: bg-opacity 1s;  
 
-  .form-qcrm {    
+  .form-qcrm { 
+
+    @media (max-width: 380px), (max-height: 440px) {
+      transform-origin: center;
+      transform: translate(-50%, -46%) scale(0.7);         
+    }  
+
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -46%);    
 
     display: flex;
     flex-flow: column;
     align-items: center;
     width: 360px;
     height: 420px;
+    max-height: 80hv;
+
     
     background: $wite08;
     box-shadow: 0 5px 25px rgb(136, 136, 136);
@@ -196,7 +205,7 @@ input {
         background-size: 10px 10px;
         opacity: 0;
       }        
-    } 
+    }    
     
     .form-qcrm__checkbox:checked + .form-qcrm__label::before {
       background-color: #3e9ffd;

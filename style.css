@@ -9,17 +9,18 @@ input {
 
 .container {
   position: relative;
-  height: 937px;
+  min-height: 100vh;
   background-color: #e4e1e1;
   background-position: center;
+  background-size: cover;
   -webkit-animation: bg-opacity 1s;
           animation: bg-opacity 1s; }
   .container .form-qcrm {
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -46%);
+            transform: translate(-50%, -46%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -32,6 +33,7 @@ input {
             align-items: center;
     width: 360px;
     height: 420px;
+    max-height: 80hv;
     background: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: 0 5px 25px #888888;
             box-shadow: 0 5px 25px #888888;
@@ -41,6 +43,12 @@ input {
             animation-duration: 1s;
     -webkit-transform-origin: top;
             transform-origin: top; }
+    @media (max-width: 380px), (max-height: 440px) {
+      .container .form-qcrm {
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: translate(-50%, -46%) scale(0.7);
+                transform: translate(-50%, -46%) scale(0.7); } }
     .container .form-qcrm__logo {
       position: absolute;
       left: 50%;
