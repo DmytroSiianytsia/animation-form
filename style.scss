@@ -25,13 +25,13 @@ input {
 
     @media (max-width: 380px), (max-height: 440px) {
       transform-origin: center;
-      transform: translate(-50%, -46%) scale(0.7);         
+      transform: translate(-50%, -50%) scale(0.7);         
     }  
 
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -46%);    
+    top: 54%;
+    transform: translate(-50%, -50%);    
 
     display: flex;
     flex-flow: column;

@@ -18,9 +18,9 @@ input {
   .container .form-qcrm {
     position: absolute;
     left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -46%);
-            transform: translate(-50%, -46%);
+    top: 54%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -47,8 +47,8 @@ input {
       .container .form-qcrm {
         -webkit-transform-origin: center;
                 transform-origin: center;
-        -webkit-transform: translate(-50%, -46%) scale(0.7);
-                transform: translate(-50%, -46%) scale(0.7); } }
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
+                transform: translate(-50%, -50%) scale(0.7); } }
     .container .form-qcrm__logo {
       position: absolute;
       left: 50%;
