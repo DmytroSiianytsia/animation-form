@@ -8,6 +8,7 @@ body {
 
 input {
   box-sizing: border-box;
+  outline: none;
 }
 
 .container {
@@ -20,18 +21,17 @@ input {
   animation: bg-opacity 1s;  
 
   .form-qcrm {    
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     width: 360px;
     height: 420px;
-
+    
     background: $wite08;
     box-shadow: 0 5px 25px rgb(136, 136, 136);
     
@@ -46,10 +46,10 @@ input {
 
       width: 100px;
       height: 100px;
-      background-color: $wite08;
-
+      
       border-radius: 20px;
-      box-shadow: 0 0 7px #b7b7b7;
+      box-shadow: 0 0 7px #b7b7b7;      
+      background-color: $wite08;
 
       animation-name: logo;
       animation-duration: 1s;
@@ -73,6 +73,7 @@ input {
         left: 29px;
 
         background: #f8911d;
+
         animation-name: orange-block;        
       }
 
@@ -81,6 +82,7 @@ input {
         left: 29px;
 
         background: #3e9ffd;
+
         animation-name: blue-block; 
       }
 
@@ -89,6 +91,7 @@ input {
         bottom: 44px;
 
         background: #d1369c;
+
         animation-name: pink-block;        
       }
 
@@ -97,6 +100,7 @@ input {
         bottom: 15px;
 
         background: #4ebf49;
+
         animation-name: green-block;        
       }
     }
@@ -119,9 +123,8 @@ input {
       height: 40px; 
       padding: 0 10px;
       
-      border: 1px solid black;     
-
       font-size: 16px; 
+      border: 1px solid black;  
       
       &::placeholder {
         color: #b7b7b7;
@@ -149,8 +152,8 @@ input {
     }
     
     &__checkbox {
-     appearance: none;
-     position: absolute;    
+      position: absolute;    
+      appearance: none;
     }  
 
     &__label {
@@ -159,27 +162,32 @@ input {
 
       font-size: 14px;
       color: #636363;
-      
+
       user-select: none;
       
       &::before {
-        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 1;
+
         display: block;
+        content: '';
         width: 13px;
         height: 13px;
         
         background-color: #fff;
         border-radius: 3px;
-
-        position: absolute;
-        top: 2px;
-        left: 0;
-        z-index: 1;
       } 
 
       &::after {
-        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 2; 
+
         display: block;
+        content: '';
         width: 13px;
         height: 13px;
 
@@ -187,11 +195,6 @@ input {
         filter: invert(1);
         background-size: 10px 10px;
         opacity: 0;
-
-        position: absolute;
-        top: 2px;
-        left: 0;
-        z-index: 2;       
       }        
     } 
     
@@ -209,13 +212,13 @@ input {
       margin-top: 40px;
       padding: 0 10px;
 
-      border: 0;
-      outline: none;
-
-      background-color: #3e9ffd;
+      font-size: 16px;
       color: #fff;
 
-      font-size: 16px;
+      border: 0;      
+      background-color: #3e9ffd;
+      cursor: pointer;
+
     }
   }
 }

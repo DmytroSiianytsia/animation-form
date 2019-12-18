@@ -4,7 +4,8 @@ body {
 
 input {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  outline: none; }
 
 .container {
   position: relative;
@@ -14,6 +15,11 @@ input {
   -webkit-animation: bg-opacity 1s;
           animation: bg-opacity 1s; }
   .container .form-qcrm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -24,11 +30,6 @@ input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     width: 360px;
     height: 420px;
     background: rgba(255, 255, 255, 0.8);
@@ -47,10 +48,10 @@ input {
               transform: translate(-50%, -50%);
       width: 100px;
       height: 100px;
-      background-color: rgba(255, 255, 255, 0.8);
       border-radius: 20px;
       -webkit-box-shadow: 0 0 7px #b7b7b7;
               box-shadow: 0 0 7px #b7b7b7;
+      background-color: rgba(255, 255, 255, 0.8);
       -webkit-animation-name: logo;
               animation-name: logo;
       -webkit-animation-duration: 1s;
@@ -99,8 +100,8 @@ input {
       width: 280px;
       height: 40px;
       padding: 0 10px;
-      border: 1px solid black;
-      font-size: 16px; }
+      font-size: 16px;
+      border: 1px solid black; }
       .container .form-qcrm__login::-webkit-input-placeholder, .container .form-qcrm__password::-webkit-input-placeholder {
         color: #b7b7b7; }
       .container .form-qcrm__login:-ms-input-placeholder, .container .form-qcrm__password:-ms-input-placeholder {
@@ -122,10 +123,10 @@ input {
       position: relative;
       width: 280px; }
     .container .form-qcrm__checkbox {
+      position: absolute;
       -webkit-appearance: none;
          -moz-appearance: none;
-              appearance: none;
-      position: absolute; }
+              appearance: none; }
     .container .form-qcrm__label {
       position: absolute;
       padding-left: 20px;
@@ -136,30 +137,30 @@ input {
           -ms-user-select: none;
               user-select: none; }
       .container .form-qcrm__label::before {
-        content: '';
-        display: block;
-        width: 13px;
-        height: 13px;
-        background-color: #fff;
-        border-radius: 3px;
         position: absolute;
         top: 2px;
         left: 0;
-        z-index: 1; }
-      .container .form-qcrm__label::after {
-        content: '';
+        z-index: 1;
         display: block;
+        content: '';
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        border-radius: 3px; }
+      .container .form-qcrm__label::after {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        z-index: 2;
+        display: block;
+        content: '';
         width: 13px;
         height: 13px;
         background: url("./img/check.png") no-repeat center;
         -webkit-filter: invert(1);
                 filter: invert(1);
         background-size: 10px 10px;
-        opacity: 0;
-        position: absolute;
-        top: 2px;
-        left: 0;
-        z-index: 2; }
+        opacity: 0; }
     .container .form-qcrm .form-qcrm__checkbox:checked + .form-qcrm__label::before {
       background-color: #3e9ffd; }
     .container .form-qcrm .form-qcrm__checkbox:checked + .form-qcrm__label::after {
@@ -169,11 +170,11 @@ input {
       height: 40px;
       margin-top: 40px;
       padding: 0 10px;
-      border: 0;
-      outline: none;
-      background-color: #3e9ffd;
+      font-size: 16px;
       color: #fff;
-      font-size: 16px; }
+      border: 0;
+      background-color: #3e9ffd;
+      cursor: pointer; }
 
 @-webkit-keyframes bg-opacity {
   0% {
