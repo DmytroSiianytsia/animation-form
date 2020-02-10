@@ -14,8 +14,8 @@ input {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-animation: bgSlider 25s linear infinite 4s;
-          animation: bgSlider 25s linear infinite 4s;
+  -webkit-animation: bgSlider 22s linear infinite;
+          animation: bgSlider 22s linear infinite;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in; }
   .container .form-qcrm {
