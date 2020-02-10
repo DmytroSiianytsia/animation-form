@@ -21,7 +21,7 @@ input {
   background-repeat: no-repeat;
 
   animation: bgSlider 25s linear infinite 4s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
 
   .form-qcrm {
     @media (max-width: 380px) {
