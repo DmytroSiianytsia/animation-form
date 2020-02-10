@@ -14,8 +14,8 @@ input {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-animation: bgSlider 22s linear infinite;
-          animation: bgSlider 22s linear infinite;
+  -webkit-animation: bgSlider 22s linear infinite 4s;
+          animation: bgSlider 22s linear infinite 4s;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in; }
   .container .form-qcrm {
@@ -40,8 +40,8 @@ input {
     background: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: 0 5px 25px #888888;
             box-shadow: 0 5px 25px #888888;
-    -webkit-animation: form-animation 1s;
-            animation: form-animation 1s;
+    -webkit-animation: form-animation 3s;
+            animation: form-animation 3s;
     -webkit-transform-origin: top;
             transform-origin: top; }
     @media (max-width: 380px) {

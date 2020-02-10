@@ -20,7 +20,7 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
 
-  animation: bgSlider 22s linear infinite;
+  animation: bgSlider 22s linear infinite 4s;
   animation-timing-function: ease-in;
 
   .form-qcrm {
@@ -45,7 +45,7 @@ input {
     background: $white08;
     box-shadow: 0 5px 25px rgb(136, 136, 136);
     
-    animation: form-animation 1s;
+    animation: form-animation 3s;
     transform-origin: top;        
     
     &__logo {
