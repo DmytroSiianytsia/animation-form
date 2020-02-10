@@ -1,9 +1,9 @@
-$wite08: rgba($color: #fff, $alpha: .8);
-$wite03: rgba($color: #fff, $alpha: .3);
+$white08: rgba($color: #fff, $alpha: .8);
+$white03: rgba($color: #fff, $alpha: .3);
 
 body {
   margin: 0; 
-  font-family: 'HelveticaNeueLight';  
+  font-family: 'HelveticaNeueLight', 'Roboto Light', 'sans-serif';
 }
 
 input {
@@ -13,17 +13,18 @@ input {
 
 .container {
   position: relative;
-  min-height: 100vh; 
-  
-  background-color: rgb(228, 225, 225);
-  background-position: center;
-  background-size: cover; 
+  min-height: 100vh;
 
-  animation: bg-opacity 1s;  
+  background-image: url("./img/1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  .form-qcrm { 
+  animation: bgSlider 20s linear infinite;
+  animation-timing-function: ease-in-out;
 
-    @media (max-width: 380px), (max-height: 440px) {
+  .form-qcrm {
+    @media (max-width: 380px) {
       transform-origin: center;
       transform: translate(-50%, -50%) scale(0.7);         
     }  
@@ -38,14 +39,13 @@ input {
     align-items: center;
     width: 360px;
     height: 420px;
-    max-height: 80hv;
+    max-height: 80vh;
 
     
-    background: $wite08;
+    background: $white08;
     box-shadow: 0 5px 25px rgb(136, 136, 136);
     
-    animation-name: form-animation;
-    animation-duration: 1s;    
+    animation: form-animation 1s;
     transform-origin: top;        
     
     &__logo {
@@ -58,7 +58,7 @@ input {
       
       border-radius: 20px;
       box-shadow: 0 0 7px #b7b7b7;      
-      background-color: $wite08;
+      background-color: $white08;
 
       animation-name: logo;
       animation-duration: 1s;
@@ -73,7 +73,6 @@ input {
         
         border-radius: 7px;
         opacity: .8;
-
         animation-duration: 1s;
       }
       
@@ -82,7 +81,6 @@ input {
         left: 29px;
 
         background: #f8911d;
-
         animation-name: orange-block;        
       }
 
@@ -91,7 +89,6 @@ input {
         left: 29px;
 
         background: #3e9ffd;
-
         animation-name: blue-block; 
       }
 
@@ -100,7 +97,6 @@ input {
         bottom: 44px;
 
         background: #d1369c;
-
         animation-name: pink-block;        
       }
 
@@ -109,7 +105,6 @@ input {
         bottom: 15px;
 
         background: #4ebf49;
-
         animation-name: green-block;        
       }
     }
@@ -133,7 +128,7 @@ input {
       padding: 0 10px;
       
       font-size: 16px; 
-      border: 1px solid black;  
+      border: 1px solid black;
       
       &::placeholder {
         color: #b7b7b7;
@@ -142,7 +137,7 @@ input {
 
     &__login:focus,
     &__password:focus {
-      border: 2px solid #3e9ffd;
+      border: 1px solid #3e9ffd;
       box-shadow: inset 0 2px 3px #b7b7b7; 
     }
 
@@ -227,20 +222,7 @@ input {
       border: 0;      
       background-color: #3e9ffd;
       cursor: pointer;
-
     }
-  }
-}
-
-@keyframes bg-opacity {
-  0% {
-    opacity: 0;
-    perspective: 0;
-  }
-
-  100% {
-    opacity: 1;
-    perspective: 70px;
   }
 }
 
@@ -259,13 +241,13 @@ input {
 @keyframes logo {
   from {
     transform: translate(-50%, -50%) rotateX(90deg);
-    background: $wite03;
+    background: $white03;
     perspective: 60px;    
   }
 
   to {
     transform: translate(-50%, -50%) rotateX(0deg);
-    background: $wite08;
+    background: $white08;
     perspective: none;
   }
 }
@@ -331,4 +313,22 @@ input {
   src: url('./fonts/HelveticaNeueLight.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
+}
+
+@keyframes bgSlider {
+ 0%, 100% {
+   background-image: url('./img/1.jpg');
+ }
+  20% {
+   background-image: url('./img/2.jpg');
+ }
+  40% {
+   background-image: url('./img/3.jpg');
+ }
+  60% {
+   background-image: url('./img/4.jpg');
+ }
+  80% {
+   background-image: url('./img/5.jpg');
+ }
 }

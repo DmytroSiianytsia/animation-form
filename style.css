@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'HelveticaNeueLight'; }
+  font-family: 'HelveticaNeueLight', 'Roboto Light', 'sans-serif'; }
 
 input {
   -webkit-box-sizing: border-box;
@@ -10,11 +10,14 @@ input {
 .container {
   position: relative;
   min-height: 100vh;
-  background-color: #e4e1e1;
-  background-position: center;
+  background-image: url("./img/1.jpg");
+  background-position: center center;
   background-size: cover;
-  -webkit-animation: bg-opacity 1s;
-          animation: bg-opacity 1s; }
+  background-repeat: no-repeat;
+  -webkit-animation: bgSlider 20s linear infinite;
+          animation: bgSlider 20s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
   .container .form-qcrm {
     position: absolute;
     left: 50%;
@@ -33,17 +36,15 @@ input {
             align-items: center;
     width: 360px;
     height: 420px;
-    max-height: 80hv;
+    max-height: 80vh;
     background: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: 0 5px 25px #888888;
             box-shadow: 0 5px 25px #888888;
-    -webkit-animation-name: form-animation;
-            animation-name: form-animation;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    -webkit-animation: form-animation 1s;
+            animation: form-animation 1s;
     -webkit-transform-origin: top;
             transform-origin: top; }
-    @media (max-width: 380px), (max-height: 440px) {
+    @media (max-width: 380px) {
       .container .form-qcrm {
         -webkit-transform-origin: center;
                 transform-origin: center;
@@ -119,7 +120,7 @@ input {
       .container .form-qcrm__login::placeholder, .container .form-qcrm__password::placeholder {
         color: #b7b7b7; }
     .container .form-qcrm__login:focus, .container .form-qcrm__password:focus {
-      border: 2px solid #3e9ffd;
+      border: 1px solid #3e9ffd;
       -webkit-box-shadow: inset 0 2px 3px #b7b7b7;
               box-shadow: inset 0 2px 3px #b7b7b7; }
     .container .form-qcrm__login {
@@ -184,25 +185,6 @@ input {
       background-color: #3e9ffd;
       cursor: pointer; }
 
-@-webkit-keyframes bg-opacity {
-  0% {
-    opacity: 0;
-    -webkit-perspective: 0;
-            perspective: 0; }
-  100% {
-    opacity: 1;
-    -webkit-perspective: 70px;
-            perspective: 70px; } }
-
-@keyframes bg-opacity {
-  0% {
-    opacity: 0;
-    -webkit-perspective: 0;
-            perspective: 0; }
-  100% {
-    opacity: 1;
-    -webkit-perspective: 70px;
-            perspective: 70px; } }
 @-webkit-keyframes form-animation {
   from {
     -webkit-transform: translate(-50%, -50%) rotateX(-10deg);
@@ -212,6 +194,7 @@ input {
     -webkit-transform: translate(-50%, -50%) rotateX(0deg);
             transform: translate(-50%, -50%) rotateX(0deg);
     opacity: .95; } }
+
 @keyframes form-animation {
   from {
     -webkit-transform: translate(-50%, -50%) rotateX(-10deg);
@@ -340,5 +323,27 @@ input {
   src: url("./fonts/HelveticaNeueLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
+@-webkit-keyframes bgSlider {
+  0%, 100% {
+    background-image: url("./img/1.jpg"); }
+  20% {
+    background-image: url("./img/2.jpg"); }
+  40% {
+    background-image: url("./img/3.jpg"); }
+  60% {
+    background-image: url("./img/4.jpg"); }
+  80% {
+    background-image: url("./img/5.jpg"); } }
+@keyframes bgSlider {
+  0%, 100% {
+    background-image: url("./img/1.jpg"); }
+  20% {
+    background-image: url("./img/2.jpg"); }
+  40% {
+    background-image: url("./img/3.jpg"); }
+  60% {
+    background-image: url("./img/4.jpg"); }
+  80% {
+    background-image: url("./img/5.jpg"); } }
 
 /*# sourceMappingURL=style.css.map */
